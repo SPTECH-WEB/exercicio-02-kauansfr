@@ -3,11 +3,11 @@ package com.strategy.entreganotificacao.service;
 import com.strategy.entreganotificacao.service.strategy.FreteStrategy;
 import org.springframework.stereotype.Service;
 
-@Service("cupomFrete")
-public class FreteCupomDescontoAdapter implements FreteStrategy {
+@Service("transportadoraExterna")
+public class TransportadoraExterna implements FreteStrategy {
     private final FreteExpresso freteExpresso;
 
-    public FreteCupomDescontoAdapter(FreteExpresso freteExpresso) {
+    public TransportadoraExterna(FreteExpresso freteExpresso) {
         this.freteExpresso = freteExpresso;
     }
 
@@ -20,6 +20,6 @@ public class FreteCupomDescontoAdapter implements FreteStrategy {
 
     @Override
     public String modalidade() {
-        return "cupomFrete";
+        return "transportadoraExterna";
     }
 }
